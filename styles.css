@@ -1,0 +1,205 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/*navigation*/
+
+.menu-btn{
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+    top: 15px;
+    right: 30px;
+    display: none;
+    z-index: 2;
+    font-size: 25px;
+    top: 10%;
+    
+}
+
+.nav-main{
+    background: black;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+
+.nav-menu{
+    justify-content: center;
+    z-index: 5;
+}
+
+.nav-brand{
+    width: 50px;
+}
+
+.nav-main ul{
+    display: flex;
+}
+
+.nav-main ul li{
+    padding: 10px;
+}
+
+.nav-main ul li a{
+    padding: 2px;
+}
+
+.nav-main ul li a:hover{
+    border-bottom: 2px solid #fff;
+}
+
+.nav-main .nav-menu{
+    flex: 1;
+    margin-left: 20px;
+}
+
+hr{
+    color: #fff;
+}
+
+
+/* Principal Slider*/
+
+.principal-slider img{
+    width: 100vw;
+    height: auto; 
+}
+
+.slick-arrow{
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+    left: 10px;
+}
+
+.slick-next{
+    right: 10px;
+    left: auto;
+}
+
+.slick-arrow:before{
+    color: black;
+    font-size: 30px;
+}
+
+/*Shelf Slider*/
+
+.shelf-slider{
+    background: rgb(245, 245, 245);
+    display: block;
+    width: 100vw
+}
+
+.product{
+    padding: 10px;
+    margin: 0px 5px 5px 0px;
+    width: 18%;
+    border: 1.5px solid black;
+}
+
+.product-img{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product p{
+    font-size: 13px;
+    margin: 0px 0px 5px 0px;
+}
+
+.info{
+    width: 80%;
+    padding: 0 10%;
+}
+
+.product .title{
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+.price{
+    text-decoration: line-through;
+    color: rgb(27, 0, 89);
+}
+
+.offer-price{
+    font-weight: bold;
+    color: red;
+}
+
+/*footer*/
+footer {
+    height: 45px;
+    width: 100vw;
+    background: black;
+    margin: 0;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h2{
+    color: bisque;
+
+}
+
+
+
+/*MEDIA QUERYS*/
+
+/*navigation*/
+
+@media (max-width: 700px){
+    .nav-main .nav-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #2f3040;
+        height: 100%;
+        transform: translateX(-400px);
+        transition: transform .5s ease-in-out;
+        padding: 30px;
+        opacity: 0.9;
+    }
+
+    .menu-btn{
+        display: block;
+    }
+
+    .menu-btn:hover{
+        opacity:0.5;
+    }
+
+    .nav-main .nav-menu.show{
+        transform:translateX(-20px);
+    }
+
+    .nav-main ul.nav-menu li{
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .nav-main .menu-right{
+        margin-right: 40px;
+    }
+}
